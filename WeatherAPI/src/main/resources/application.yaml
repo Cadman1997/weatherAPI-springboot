@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: WeatherAPI
+
+openweather:
+  api-key: 2e1bf4f79d7d9f42aaf7966211df12b5
+  base-url: https://api.openweathermap.org
+  units: metric
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+cache:
+  weather-ttl-seconds: 43200   # 12 hours
